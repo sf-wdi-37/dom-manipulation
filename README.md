@@ -193,7 +193,7 @@ It's going to be a pain to build a string that captures this HTML without it bei
 '</div>'
 ```
 
-Luckily, ES6 provides us with an easier approach. By wrapping the whole HTML string with the backtick (` ` `) symbol (key just below the `esc` button and to the left of the `1` on your keyboard), we can build a string template in the JS without keeping track of all of those single quotes and `+`'s required for concatenation.
+Luckily, ES6 provides us with an easier approach. By wrapping the whole HTML string with the backtick (\`) symbol (key just below the `esc` button and to the left of the `1` on your keyboard), we can build a string template in the JS without keeping track of all of those single quotes and `+`'s required for concatenation.
 
 ```javascript
 `<div class="thanks-message">
