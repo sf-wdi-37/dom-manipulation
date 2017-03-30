@@ -89,7 +89,7 @@ To do this, we have two options:
 #### Using jQuery
 You know you're working with jQuery any time you see a `$()` in your code. `$` is an abbreviation for using the function name `jQuery` all over your code.
 
-As you're working with jQuery to manipulate DOM elements, you are almost always either *getting* or *setting* a value. Memorize this pattern:  
+As you're working with jQuery to manipulate DOM elements, you are almost always either *getting* or *setting* a value. Get familiar with this pattern:  
 - `$("CSS Selector").someJqueryMethodName()` - **getting** a value  
 - `$("CSS Selector").someJqueryMethodName(setterValue)` - **setting** a value
 
@@ -98,6 +98,7 @@ For example, if you are viewing the home page on jQuery.com, then you can try th
 - `$('p').text("Boo!")` -- **set** the text of the readme to "Boo!"
 
 Wowza!
+
 ![wow](https://cloud.githubusercontent.com/assets/6520345/13719043/1bdbe8ce-e7a5-11e5-96ac-ea05ad01df88.gif)
 
 Let's try another:  
@@ -124,8 +125,7 @@ Take a look at the [raw jquery library](http://code.jquery.com/jquery-2.1.3.js) 
 
 jQuery often saves *you* a bunch of time. Because it's just JavaScript under the hood, some argue [you might not need jQuery](http://youmightnotneedjquery.com). It's always less efficient for the computer to execute jQuery (this often doesn't matter though) and it sometimes can be overkill, depending on what you're doing.
 
-Take a look at [this Comparison of jQuery and Vanilla JS](http://bl.ocks.org/joyrexus/7307312) . Here are some of the basic differences:
-
+Take a look at [this Comparison of jQuery and Vanilla JS](http://bl.ocks.org/joyrexus/7307312). Here are some of the basic differences:
 
 
 **Selecting Elements**
@@ -193,7 +193,7 @@ $('body').append('<div class="thanks-message">' +
 '</div>')
 ```
 
-Luckily, ES6 provides us with an easier approach. By wrapping the whole HTML string with the backtick (\`) symbol (key just below the `esc` button and to the left of the `1` on your keyboard), we can build a string template in the JS without keeping track of all of those single quotes and `+`'s required for concatenation.
+Luckily, ES6 provides us with an easier approach. By wrapping the whole HTML string with the backtick (` ` `) symbol (key just below the `esc` button and to the left of the `1` on your keyboard), we can build a string template in the JS without keeping track of all of those single quotes and `+`'s required for concatenation.
 
 ```javascript
 $('body').append(`<div class="thanks-message">
@@ -218,3 +218,7 @@ $('body').append(`
 ```
 
 This is called **string interpolation** and is helpful if you need to inject specific information into a default template. We'll revisit this tool later!
+
+## Training
+
+[jQuery DOM lab](https://github.com/sf-wdi-37/jquery-dom-lab)
