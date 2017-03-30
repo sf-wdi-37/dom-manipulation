@@ -173,7 +173,7 @@ document.body.appendChild(newDiv);
 
 ## ES6 String templates
 
-You may find that you want to use jQuery to insert new HTML into your page (especially in response to events). Imagine you want to insert this hunk of HTML every time a user fills out a form.
+You may find that you want to use jQuery to insert a large chunk of new HTML into your page (especially in response to events). Imagine you want to insert this HTML every time a user fills out a form.
 
 ```html
 <div class="thanks-message">
@@ -183,24 +183,24 @@ You may find that you want to use jQuery to insert new HTML into your page (espe
 </div>
 ```
 
-It's going to be a pain to build a string that captures this HTML without it being a formatting nightmare. It'd need to look like this:
+It's going to be a pain to build a string that captures this HTML. It would need to look like this:
 
-```js
-'<div class="thanks-message">' +
+```javascript
+$('body').append('<div class="thanks-message">' +
   '<h1>Thank you!</h1>' +
   '<img src="https://rlv.zcache.com/unicorn_thank_you_card_template-rb0363f3e2de14ea59f210fa9b4250004_xvua8_8byvr_324.jpg" alt="">' +
   '<p>We appreciate your submission! Please <a href="#">let us know if you have any questions or concerns.</a></p>' +
-'</div>'
+'</div>')
 ```
 
 Luckily, ES6 provides us with an easier approach. By wrapping the whole HTML string with the backtick (` ` `) symbol (key just below the `esc` button and to the left of the `1` on your keyboard), we can build a string template in the JS without keeping track of all of those single quotes and `+`'s required for concatenation.
 
 ```javascript
-`<div class="thanks-message">
+$('body').append(`<div class="thanks-message">
   <h1>Thank you!</h1>
   <img src="https://rlv.zcache.com/unicorn_thank_you_card_template-rb0363f3e2de14ea59f210fa9b4250004_xvua8_8byvr_324.jpg" alt="">
   <p>We appreciate your submission! Please <a href="#">let us know if you have any questions or concerns.</a></p>
-</div>`
+</div>`)
 ```
 
 The backtick will capture a string across multiple lines. It has another special property too! It will be interpreted before it is used, so you can put variables in it, that will be evaluated at the time the string is used. Just use the peso bracket `${}` like this:
